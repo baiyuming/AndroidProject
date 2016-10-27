@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         RadioGroupListener radioGroupListener = new RadioGroupListener();
         radioGroup.setOnCheckedChangeListener(radioGroupListener);
 
+        // 第二种监听器
+        RadioButtonListener radioButtonListener = new RadioButtonListener();
+        maleButton.setOnCheckedChangeListener(radioButtonListener);
     }
 
     class RadioGroupListener implements RadioGroup.OnCheckedChangeListener{
@@ -36,4 +39,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    // 第二种监听器
+
+    class RadioButtonListener implements CompoundButton.OnCheckedChangeListener{
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView ,boolean isChecked){
+            System.out.println("isChecked ++++++ ------>>>>>" + isChecked);
+        }
+    }
+
 }
