@@ -58,13 +58,15 @@
             android:layout_weight="1"
             android:hint="输入来自千米的短信验证码"
             android:textColorHint="#ccc"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:id="@+id/editText" />
 
     </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ddd" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -91,6 +93,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -104,10 +107,10 @@
                 android:textSize="10sp"/>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="30dp">
         <Button
             android:layout_width="match_parent"
@@ -117,6 +120,6 @@
             android:textSize="16sp"
             android:layout_margin="30dp"
             android:layout_gravity="right"
-            android:background="#fff"/>
+            android:background="@drawable/shape_register_btn"/>
     </LinearLayout>
 </LinearLayout>
