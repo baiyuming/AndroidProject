@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Activity</string>
     <string name="title_activity_test">ActivityTest</string>
+    <string name="editstring">edit string ...</string>
+    <string name="btn">按钮</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
 </resources>
