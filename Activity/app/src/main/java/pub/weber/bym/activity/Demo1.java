@@ -1,7 +1,6 @@
 package pub.weber.bym.activity;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,5 +20,5 @@ public class Demo1 extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
     }
-    public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
+    public final static String EXTRA_MESSAGE = "1";
 }
