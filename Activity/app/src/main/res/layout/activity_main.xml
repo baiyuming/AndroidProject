@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="pub.weber.bym.activity.MainActivity">
+    tools:context="pub.weber.bym.activity.MainActivity"
+    android:weightSum="1">
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="29dp"
         android:id="@+id/btn"
-        android:text="Button"
-        />
+        android:text="button"
+        android:layout_weight="0.01" />
 </LinearLayout>
