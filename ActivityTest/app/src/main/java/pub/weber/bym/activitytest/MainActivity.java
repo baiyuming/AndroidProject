@@ -1,6 +1,7 @@
 package pub.weber.bym.activitytest;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,8 +24,11 @@ public class MainActivity extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Toast.makeText(MainActivity.this,"你点了按钮",Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                Intent intent = new Intent("pub.weber.bym.activitytest.ACTION_START");
+                intent.addCategory("com.example.activitytest.MY_CATEGORY");
+                startActivity(intent);
+                //Toast.makeText(MainActivity.this,"你点了按钮",Toast.LENGTH_SHORT).show();
                 //finish();// 销毁活动
             }
         });
