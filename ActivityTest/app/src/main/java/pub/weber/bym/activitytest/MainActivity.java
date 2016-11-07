@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.health.SystemHealthManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,11 +36,33 @@ public class MainActivity extends Activity {
 //                Intent intent = new Intent(Intent.ACTION_VIEW);
 //                intent.setData(Uri.parse("http://weber.pub/"));
 //                startActivity(intent);
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:10086"));
-                startActivity(intent);
+
+//                Intent intent = new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:10086"));
+//                startActivity(intent);
+
+//                String data = "Hi weber.pub";
+//                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+//                intent.putExtra("extra_data",data);
+//                startActivity(intent);
+
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                startActivityForResult(intent,1);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode,int resultCode,Intent data){
+        switch (requestCode){
+            case 1:
+                if (resultCode == RESULT_OK){
+                    String returnedData = data.getStringExtra("data_return");
+                    Log.d("MainActivity 接收返回结果：",returnedData);
+                }
+                break;
+            default:
+        }
     }
 
     @Override
