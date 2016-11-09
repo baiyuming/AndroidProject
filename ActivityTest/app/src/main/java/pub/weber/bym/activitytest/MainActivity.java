@@ -20,6 +20,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        //Log.d("MainActivity -->> " , this.toString());
+        Log.d("MainActivity -->> " , "Task id 是：" + getTaskId());
         requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题栏
         setContentView(R.layout.activity_main);
 
@@ -46,8 +48,11 @@ public class MainActivity extends Activity {
 //                intent.putExtra("extra_data",data);
 //                startActivity(intent);
 
-                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-                startActivityForResult(intent,1);
+//                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+//                startActivityForResult(intent,1);
+
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -63,6 +68,12 @@ public class MainActivity extends Activity {
                 break;
             default:
         }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("MainActivity", "onRestart");
     }
 
     @Override

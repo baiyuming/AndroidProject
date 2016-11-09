@@ -14,6 +14,7 @@ public class SecondActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("SecondActivity", "Task id 是： " + getTaskId());
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_second);
 
@@ -21,17 +22,21 @@ public class SecondActivity extends Activity {
 //        String data = intent.getStringExtra("extra_data");
 //        Log.d("第二个活动：",data);
 //
-//        Button button2 = (Button) findViewById(R.id.button_2);
-//        button2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.putExtra("data_return","Hello weber.pub MainActivity ");
-//                setResult(RESULT_OK,intent);
-//                finish();
-//            }
-//        });
+        Button button2 = (Button) findViewById(R.id.button_2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SecondActivity.this,ThirdActivity.class);
+                startActivity(intent);
+            }
+        });
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("SecondActivity", "onDestroy");
     }
 
     @Override
