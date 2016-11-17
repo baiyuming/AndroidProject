@@ -29,8 +29,8 @@ public class MainActivity extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("com.example.broadcasttest.MY_BROADCAST");
-                sendBroadcast(intent);
+                Intent intent = new Intent("pub.weber.bym.MY_BROADCAST");
+                sendOrderedBroadcast(intent,null);
             }
         });
     }
