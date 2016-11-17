@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 /**
- * Created by BYM on 2016/11/16.
+ * Created by BYM on 2016/11/16. 啦啦啦啦
  */
 
 public class BootCompleteReceiver extends BroadcastReceiver {
