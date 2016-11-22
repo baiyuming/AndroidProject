@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
+    <string name="question_text">你是中国的么？？？</string>
+    <string name="false_button">错误</string>
+    <string name="true_button">正确</string>
+    <string name="true_toast">回答正确</string>
+    <string name="false_toast">回答错误</string>
+    <string name="next_button">下一题</string>
+    <string name="pre_button">上一题</string>
+    <string name="question_text1">问题一？？？</string>
+    <string name="question_text2">问题2？？？</string>
+    <string name="question_text3">问题3？？？</string>
+    <string name="question_text4">问题4？？？</string>
+    <string name="question_text5">问题5？？？</string>
+    <string name="question_text6">问题6？？？</string>
+    <string name="question_text7">问题7？？？</string>
 </resources>
